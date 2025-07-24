@@ -1,6 +1,6 @@
 # Gemini CLI Project Constitution
 
-## Vibe
+## Project Overview
 A Python script that uses the `turtle` library to draw pixel art based on a 2D data array.
 
 ## Core Technologies
