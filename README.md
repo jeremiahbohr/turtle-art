@@ -1,5 +1,7 @@
 # Turtle Pixel Art
 
+![Turtle Pixel Art Example](turtle.png)
+
 This project uses Python's `turtle` library to generate a pixel art drawing of a turtle.
 
 ## How it Works
