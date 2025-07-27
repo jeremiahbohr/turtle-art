@@ -30,23 +30,7 @@ def create_pixel_art(art_data, color_map, pixel_size=20):
                 color = color_map.get(color_code, "blue") # Use color_map, default to blue
                 draw_pixel(x, y, color, pixel_size)
 
-def check_symmetry(data):
-    """Checks if the 2D data array is symmetrical along its vertical axis."""
-    for row in data:
-        # Filter out transparent pixels (0) for symmetry check if they are just padding
-        # For perfect symmetry, we need to check the actual pixel data.
-        # Assuming 0s are part of the symmetry if they are within the bounds of the turtle.
-        # For now, a simple row reversal check.
-        if len(row) % 2 != 0: # Odd number of columns, middle column is its own mirror
-            left_half = row[:len(row)//2]
-            right_half = row[len(row)//2 + 1:]
-        else:
-            left_half = row[:len(row)//2]
-            right_half = row[len(row)//2:]
-        
-        if left_half != right_half[::-1]:
-            return False
-    return True
+
 
 if __name__ == "__main__":
     # 0 = transparent
@@ -86,7 +70,7 @@ if __name__ == "__main__":
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   # Empty row for spacing
     ]
 
-    print(f"Aerial view data symmetry: {check_symmetry(aerial_view_turtle_data)}")
+    
 
     # Color schemes
     color_schemes = {
